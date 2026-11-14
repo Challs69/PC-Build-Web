@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    height: auto;
+    width: 100px;
+    border-radius: 8px;
+}
+
+body{
+    background: linear-gradient(135deg, #22223b, #22223bed);
+    color: #f2e9e4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* header */
+
+.head-container{
+    border-bottom: 1px solid #4a4e69;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.title i{
+    color: rgba(0, 255, 136, 0.8);
+    filter: drop-shadow(0 0 6px rgba(0, 255, 136, 0.8));
+    font-size: 30px;
+}
+
+.title span{
+    color: rgba(0, 255, 136, 0.8);
+}
+
+.strbld-btn{
+    background-color:rgba(0, 255, 136, 0.8) ;
+    padding: 8px 15px;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #4a4e69;
+}
+
+.strbld-btn:hover {
+    background-color: rgba(0, 255, 136, 0.685);
+    color: #f2e9e4e5;
+}
+
+.strbld-btn:active { 
+    border: 2px solid #4a4e69;
+}
+
+/* main body */
+
+
+
+/* hero Section */
+
+.hero-container{
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 16px 80px;
+}
+
+.hero-Section{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* left txt */
+.left-txt{
+    height: auto;
+    /* width: 700px; */
+    padding: 16px;
+}
+
+.left-txt h2{
+    font-size: 100px;
+    padding-bottom: 32px;
+}
+
+.left-txt h2 span{
+    color: rgba(0, 255, 136, 0.685);
+}
+
+.left-txt p{
+    line-height: 1.5;
+}
+
+/* right img */
+
+.right-img{
+    padding: 16px;
+}
+
+.right-img img{
+    height: auto;
+    width: 400px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* sections starts here */
+
+.section-container{
+    padding: 16px 80px;
+}
+
+.section{
+    padding: 16px;
+}
+
