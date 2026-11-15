@@ -199,6 +199,48 @@ body{
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* choose types hover effect */
+
+    /* worker / proffe */
+
+.cards{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease,
+                max-width 0.4s ease,
+                max-height 0.4s ease;
+
+    max-width: 766px;
+    max-height: 0;
+    text-align: left;
+    font-size: 15px;
+    padding: 32px 16px 0px 16px;
+}
+
+.cards.show{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 15px;
+    padding: 32px 16px 0px 16px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    max-width: 766px;
+    max-height: 300px;
+}
+
+.cards p{
+    font-size: 15px;
+    padding-bottom: 8px;
+}
+
+
+
 .startbld-btn{
     display: flex;
     justify-content: center;
