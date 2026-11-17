@@ -52,12 +52,12 @@
     visibility: hidden;
     transform: translateY(10px);
 
-    transition: opacity 0.3s ease,
+    transition: /*opacity 0.3s ease,*/
                 transform 0.3s ease,
                 visibility 0.3s ease,
                 max-width 0.4s ease,
                 max-height 0.4s ease,
-                position 0.4s ease;
+                position 0.3s ease;
 
     max-width: 766px;
     max-height: 0;

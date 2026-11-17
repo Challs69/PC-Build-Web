@@ -34,3 +34,39 @@ gamerBtn.addEventListener("mouseenter", () => {
 gamerBtn.addEventListener("mouseleave", () => {
     gamerInfoHover.classList.remove("show")
 });
+
+// casual btn hover info
+const casualInfoHover = document.getElementById("casualInfo")
+const casualBtn = document.getElementById("casualBtn")
+
+casualBtn.addEventListener("mouseenter" , () => {
+    casualInfoHover.classList.add("show")
+});
+
+casualBtn.addEventListener("mouseleave" , () => {
+    casualInfoHover.classList.remove("show")
+});
+
+// pc info hover
+const pcInfoHover = document.getElementById("pcInfo")
+const pcBtn = document.getElementById("pcBldBtn")
+
+pcBtn.addEventListener("mouseenter", () => {
+    pcInfoHover.classList.add("show")
+});
+
+pcBtn.addEventListener("mouseleave", () => {
+    pcInfoHover.classList.remove("show")
+});
+
+// laptop info hover
+const laptopInfoHover = document.getElementById("laptopInfo")
+const laptopBtn = document.getElementById("laptopBldBtn")
+
+laptopBtn.addEventListener("mouseenter", () => {
+    laptopInfoHover.classList.add("show")
+});
+
+laptopBtn.addEventListener("mouseleave", () => {
+    laptopInfoHover.classList.remove("show")
+});
