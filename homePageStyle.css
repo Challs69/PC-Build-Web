@@ -175,6 +175,7 @@ body{
     max-width: 800px;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    position: relative;
 }
 
 .choosType{

@@ -47,7 +47,7 @@
 /* choose type hover effect */
 
 .cards{
-    
+    position: absolute;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -56,7 +56,8 @@
                 transform 0.3s ease,
                 visibility 0.3s ease,
                 max-width 0.4s ease,
-                max-height 0.4s ease;
+                max-height 0.4s ease,
+                position 0.4s ease;
 
     max-width: 766px;
     max-height: 0;
@@ -66,6 +67,7 @@
 }
 
 .cards.show{
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: left;
