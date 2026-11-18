@@ -32,6 +32,13 @@ body{
 
 /* header */
 
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #22223b;
+}
+
 .head-container{
     border-bottom: 1px solid #4a4e69;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -39,6 +46,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .title{
@@ -107,7 +115,7 @@ body{
 }
 
 .left-txt h2 span{
-    color: rgba(0, 255, 136, 0.685);
+    color: rgba(0, 255, 136, 0.9);
 }
 
 .left-txt p{
@@ -134,6 +142,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0px 5px;
 }
 
 .section{
@@ -147,7 +156,7 @@ body{
 }
 
 .section span{
-    color: rgba(0, 255, 136, 0.685);
+    color: rgba(0, 255, 136, 0.8);
 }
 
 .section p {
@@ -187,6 +196,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .cards p{
@@ -348,5 +358,218 @@ body{
 
     .cards {
         font-size: 15px;
+    }
+}
+
+@media(max-width: 905px){
+
+    .left-txt h2{
+        font-size: 50px;
+        padding-bottom: 15px;
+    }
+
+    .right-img img{
+        width: 200px;
+    }
+
+    .left-txt p{
+        line-height: 1.5;
+        font-size: 10px;
+    }
+    
+    .hero-container{
+        padding: 16px 5px;
+    } 
+
+    .sep-info{
+        width: 730px;
+        padding: 16px 21px;
+    }
+
+    .hero-Section{
+        justify-content: center;
+    }
+
+    .left-txt{
+        width: 450px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+        padding: 16px 0px;
+    }
+
+    .section p{
+        font-size: 15px;
+    }
+
+    .box h2{
+        font-size: 30px;
+    }
+
+    .cards {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 740px){
+
+    .left-txt h2{
+        font-size: 40px;
+        padding-bottom: 15px;
+    }
+
+    .right-img img{
+        width: 170px;
+    }
+
+    .left-txt p{
+        line-height: 1.5;
+        font-size: 10px;
+    }
+    
+    .hero-container{
+        padding: 16px 5px;
+    } 
+
+    .sep-info{
+        width: 100%;
+        max-width: 600px;
+        padding: 16px 21px;
+    }
+
+    .hero-Section{
+        justify-content: center;
+    }
+
+    .left-txt{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .section h2 {
+        font-size: 25px;
+        padding: 16px 0px;
+    }
+
+    .section p{
+        font-size: 13px;
+    }
+
+    .box h2{
+        font-size: 25px;
+    }
+
+    .cards {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 580px){
+
+    .head-container{
+        border-bottom: 1px solid #4a4e69;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 8px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        font-size: 10px;
+    }
+
+    .strbld-btn{
+        background-color:rgba(0, 255, 136, 0.8) ;
+        padding: 8px 15px;
+        border-radius: 16px;
+        cursor: pointer;
+        color: #4a4e69;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        font-size: 10px;
+    }
+
+    .left-txt h2{
+        font-size: 40px;
+        padding-bottom: 15px;
+        font-weight: 1000;
+    }
+
+    .right-img{
+        width: 0px;
+        padding: 0px;
+    }
+
+    .right-img img{
+        width: 0px;
+    }
+
+    .left-txt p{
+        line-height: 1.5;
+        font-size: 10px;
+    }
+    
+    .hero-container{
+        padding: 8px 0px;
+        background-image: url("imgs/christian-wiediger-KV2vFOYItcY-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        aspect-ratio: 552 / 240;
+    } 
+
+    .sep-info{
+        width: 100%;
+        max-width: 440px;
+        padding: 16px 4px;
+    }
+
+    .hero-Section{
+        justify-content: center;
+        padding: 4px;
+    }
+
+    .left-txt{
+        width: 100%;
+        max-width: 440px;
+        padding: 12px;
+    }
+
+    .section{
+        padding: 8px;
+    }
+
+    .section h2 {
+        font-size: 25px;
+        padding: 16px 0px;
+    }
+
+    ul{
+        padding-left: 15px;
+    }
+
+    li{
+        font-size: 13px;
+    }
+
+    .section p{
+        font-size: 13px;
+    }
+
+    .box{
+        padding: 16px;
+    }
+
+    .box h2{
+        font-size: 25px;
+    }
+
+    .cards {
+        font-size: 13px;
     }
 }
