@@ -28,6 +28,13 @@ span{
 
 /* header */
 
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #22223b;
+}
+
 .head-container{
     border-bottom: 1px solid #4a4e69;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -67,7 +74,7 @@ span{
     margin: 32px 16px;  
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 95%;
+    width: 98%;
     /* max-width: 100%; */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -78,6 +85,8 @@ span{
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
+
+    text-align: left;
 }
 
 h2{
@@ -96,11 +105,19 @@ h2 span{
 .content{
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid #4a4e69;
+    width: 100%;
+    padding: 8px;
 }
 
 .info{
     font-size: 15px;
     padding: 16px 0px;
+    text-align: left;
+}
+
+.subInfo{
+    width: 220px;
 }
 
 /* cards container */
@@ -202,6 +219,57 @@ h2 span{
     visibility: visible;
     transform: translateY(0);
     position: relative;
+    border-bottom: 1px solid #4a4e69;
+    width: 100%;
+    padding: 8px;
+}
+
+/* content ex. */
+
+.content h3{
+    padding-bottom: 8px;
+}
+
+.content p {
+    padding-bottom: 8px;
+}
+
+/* exmaples */
+
+.exapmles-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.brand-exmaples{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid #4a4e69;
+    padding: 8px;
+    text-align: center;
+    margin: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.parts-container{
+    display: flex;
+    margin-bottom: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.parts{
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #4a4e69;
+    padding: 8px;
+    width: 150px;
+}
+
+.subHead{
+    opacity: 0.6;
 }
 
 /* footer */

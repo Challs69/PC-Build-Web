@@ -23,7 +23,7 @@ intelBtn.addEventListener("click", (event) => {
     
 });
 
-// to show intel series
+// to show intel core series 
 
 const showIntelSeries = document.getElementById("intel-series-choose")
 const intelCoreBtn = document.getElementById("intelCoreBtn")
@@ -31,4 +31,13 @@ const intelCoreBtn = document.getElementById("intelCoreBtn")
 intelCoreBtn.addEventListener("click", () => {
     showIntelSeries.classList.toggle("active")
     console.log("hi1")
+})
+
+// to show intel i3 genration
+
+const showIntelGene = document.getElementById("intel-gene-choose")
+const intelI3Btn = document.getElementById("intelI3Btn")
+
+intelI3Btn.addEventListener("click", () => {
+    showIntelGene.classList.toggle("active")
 })
