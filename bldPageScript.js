@@ -12,16 +12,113 @@ clickBtn.forEach((clickBtn) => {
 
 });
 
+function resetingAllIntelBtns(){
+
+    // reseting families btn
+
+    rstFamiliesBtn.forEach((rstFamiliesBtn) => {
+        rstFamiliesBtn.classList.remove("active")
+    })
+
+    //  reseting series btn also
+    rstSeriesBtn.forEach((rstSeriesBtn) => {
+        rstSeriesBtn.classList.remove("active")
+    })
+
+    // resting gene btn also
+    rstGeneBtn.forEach((rstGeneBtn) => {
+        rstGeneBtn.classList.remove("active")
+    })
+
+    // reseting suffix btn also
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+    console.log("hi")
+}
+
+function removActiveFrAllInfo(){
+
+    // series deactivate
+    showIntelSeries.classList.remove("active")
+
+    // gene deactivate
+    showIntelGene.classList.remove("active")
+
+    //suffix deactivate
+    showIntelSuffix.classList.remove("active")
+
+}
+
+// reseting children button (series child)
+
+const rstFamiliesBtn = document.querySelectorAll("#intel-families-choose .btns")
+
 // to show intel famliy section
 
 const intelBtn = document.getElementById("intelBtn")
 const showSubSection = document.getElementById("intel-families-choose")
 
-intelBtn.addEventListener("click", (event) => {
-    showSubSection.classList.toggle("active")
-    console.log("hi")
+intelBtn.addEventListener("click", () => {
+
+    amdBtn.classList.remove("active")
+
+    if(showSubSection.classList.contains("active")){
+        
+        showSubSection.classList.toggle("active")
+        amdBtn.classList.remove("active")
+
+        setTimeout(() => {
+            showSubSection.classList.toggle("active")
+        }, 100);
+    } else {
+        showSubSection.classList.toggle("active")
+    }
+
+    // reseting families btn
+
+    rstFamiliesBtn.forEach((rstFamiliesBtn) => {
+        rstFamiliesBtn.classList.remove("active")
+    })
+
+    //  reseting series btn also
+    rstSeriesBtn.forEach((rstSeriesBtn) => {
+        rstSeriesBtn.classList.remove("active")
+    })
+
+    // resting gene btn also
+    rstGeneBtn.forEach((rstGeneBtn) => {
+        rstGeneBtn.classList.remove("active")
+    })
+
+    // reseting suffix btn also
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
     
 });
+
+// to show amd ...
+
+const amdBtn = document.getElementById("amdBtn")
+
+amdBtn.addEventListener("click" , () => {
+
+    removActiveFrAllInfo()
+    intelBtn.classList.remove("active")
+    showSubSection.classList.remove("active")
+    resetingAllIntelBtns()
+
+})
+
+
+
+// reseting children button (series child)
+
+const rstSeriesBtn = document.querySelectorAll("#intel-series-choose .btns")
 
 // to show intel core series 
 
@@ -29,9 +126,74 @@ const showIntelSeries = document.getElementById("intel-series-choose")
 const intelCoreBtn = document.getElementById("intelCoreBtn")
 
 intelCoreBtn.addEventListener("click", () => {
-    showIntelSeries.classList.toggle("active")
-    console.log("hi1")
+
+    if(showIntelSeries.classList.contains("active")){
+        
+        showIntelSeries.classList.toggle("active")
+        intelUltraBtn.classList.remove("active")
+
+        setTimeout(() => {
+            showIntelSeries.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelSeries.classList.toggle("active")
+    }
+
+    rstSeriesBtn.forEach((rstSeriesBtn) => {
+        rstSeriesBtn.classList.remove("active")
+    })
+
+    // resting gene btn also
+    rstGeneBtn.forEach((rstGeneBtn) => {
+        rstGeneBtn.classList.remove("active")
+    })
+
+    // reseting suffix btn also
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
 })
+
+// to show intel ultra series
+
+const intelUltraBtn = document.getElementById("intelUltraBtn")
+
+intelUltraBtn.addEventListener("click", () => {
+
+    if(showIntelSeries.classList.contains("active")){
+        
+        showIntelSeries.classList.toggle("active")
+        intelCoreBtn.classList.remove("active")
+
+        setTimeout(() => {
+            showIntelSeries.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelSeries.classList.toggle("active")
+    }
+
+    rstSeriesBtn.forEach((rstSeriesBtn) => {
+        rstSeriesBtn.classList.remove("active")
+    })
+
+    // resting gene btn also
+    rstGeneBtn.forEach((rstGeneBtn) => {
+        rstGeneBtn.classList.remove("active")
+    })
+
+    // reseting suffix btn also
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+
+// reseting children button (generation child)
+
+const rstGeneBtn = document.querySelectorAll("#intel-gene-choose .btns")
 
 // to show intel i3 genration
 
@@ -39,41 +201,151 @@ const showIntelGene = document.getElementById("intel-gene-choose")
 const intelI3Btn = document.getElementById("intelI3Btn")
 
 intelI3Btn.addEventListener("click", () => {
-    showIntelGene.classList.toggle("active")
+    
+    if(showIntelGene.classList.contains("active")){
+        
+        showIntelGene.classList.toggle("active")
+        intelI5Btn.classList.remove("active")
+        intelI7Btn.classList.remove("active")
+        intelI9Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelGene.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelGene.classList.toggle("active")
+    }
+
+    rstGeneBtn.forEach((rstGeneBtn) => {
+        rstGeneBtn.classList.remove("active")
+    })
+
+    // reseting suffix btn also
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
 })
 
+// to show intel i5 generation
+
+const intelI5Btn = document.getElementById("intelI5Btn")
+
+intelI5Btn.addEventListener("click" , () => {
+
+    if(showIntelGene.classList.contains("active")){
+        
+        showIntelGene.classList.toggle("active")
+        intelI3Btn.classList.remove("active")
+        intelI7Btn.classList.remove("active")
+        intelI9Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelGene.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelGene.classList.toggle("active")
+    }
+
+    rstGeneBtn.forEach((rstGeneBtn) => {
+        rstGeneBtn.classList.remove("active")
+    })
+
+    // reseting suffix btn also
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+
+// to show intel i7 generation
+
+const intelI7Btn = document.getElementById("intelI7Btn")
+
+intelI7Btn.addEventListener("click" , () => {
+
+    if(showIntelGene.classList.contains("active")){
+        
+        showIntelGene.classList.toggle("active")
+        intelI5Btn.classList.remove("active")
+        intelI3Btn.classList.remove("active")
+        intelI9Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelGene.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelGene.classList.toggle("active")
+    }
+
+    rstGeneBtn.forEach((rstGeneBtn) => {
+        rstGeneBtn.classList.remove("active")
+    })
+
+    // reseting suffix btn also
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+
+// to show intel i9 generation
+
+const intelI9Btn = document.getElementById("intelI9Btn")
+
+intelI9Btn.addEventListener("click" , () => {
+
+    if(showIntelGene.classList.contains("active")){
+        
+        showIntelGene.classList.toggle("active")
+        intelI3Btn.classList.remove("active")
+        intelI7Btn.classList.remove("active")
+        intelI5Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelGene.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelGene.classList.toggle("active")
+    }
+
+    rstGeneBtn.forEach((rstGeneBtn) => {
+        rstGeneBtn.classList.remove("active")
+    })
+
+    // reseting suffix btn also
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
 
 // reseting children button (suffix child)
 
 const rstSuffixBtn = document.querySelectorAll("#suffixCardContainer .btns")
 
-// rstSuffixBtn.forEach((rstSuffixBtn) => { })
-
 // to show 12th gen suffix
-
-let isIntel12GenActive = false
 
 const showIntelSuffix = document.getElementById("suffix-choose")
 const intel12GenBtn = document.getElementById("intel12Btn")
 
 intel12GenBtn.addEventListener("click" , () => {
 
-    console.log(isIntel12GenActive)
-
     if(showIntelSuffix.classList.contains("active")){
-        //console.log("contains")
+        
         showIntelSuffix.classList.toggle("active")
         intel13GenBtn.classList.remove("active")
         intel14GenBtn.classList.remove("active")
-        //console.log("removed")
+        
         setTimeout(() => {
             showIntelSuffix.classList.toggle("active")
-            //console.log("added")
         }, 100);
     } else {
         showIntelSuffix.classList.toggle("active")
-        isIntel12GenActive = true
-        console.log(isIntel12GenActive)
     }
 
     rstSuffixBtn.forEach((rstSuffixBtn) => {
@@ -91,18 +363,16 @@ intel13GenBtn.addEventListener("click" , () => {
     console.log(isIntel12GenActive)
 
     if(showIntelSuffix.classList.contains("active")){
-        // console.log("contains")
+        
         showIntelSuffix.classList.toggle("active")
         intel14GenBtn.classList.remove("active")
         intel12GenBtn.classList.remove("active")
-        // console.log("removed")
+        
         setTimeout(() => {
             showIntelSuffix.classList.toggle("active")
-            //console.log("added")
         }, 100);
     } else {
         showIntelSuffix.classList.toggle("active")
-        // console.log("notContains")
     }
 
     rstSuffixBtn.forEach((rstSuffixBtn) => {
@@ -118,18 +388,16 @@ const intel14GenBtn = document.getElementById("intel14Btn")
 intel14GenBtn.addEventListener("click" , () => {
 
     if(showIntelSuffix.classList.contains("active")){
-        // console.log("contains")
+        
         showIntelSuffix.classList.toggle("active")
         intel13GenBtn.classList.remove("active")
         intel12GenBtn.classList.remove("active")
-        // console.log("removed")
+        
         setTimeout(() => {
             showIntelSuffix.classList.toggle("active")
-            //console.log("added")
         }, 100);
     } else {
         showIntelSuffix.classList.toggle("active")
-        // console.log("notContains")
     }
 
     rstSuffixBtn.forEach((rstSuffixBtn) => {
@@ -138,48 +406,114 @@ intel14GenBtn.addEventListener("click" , () => {
 
 })
 
-// model num hover effect
 
-const modelNumHover = document.getElementById("intel-example")
 
-// them pop info elements 
+// them intel pop info elements 
 const iseriesInfoPop = document.getElementById("iseries")
 const igenInfoPop = document.getElementById("igen")
 const iskuInfoPop = document.getElementById("isku")
 const isuffixInfoPop = document.getElementById("isuffix")
 
-modelNumHover.addEventListener("mouseover" , (event) => {
+const hoverBtns = document.querySelectorAll(".parts")
 
-    if(event.target.classList.contains("parts")){
+hoverBtns.forEach((hoverBtns) => {
 
-        if(event.target.id === "btnISeries" && !event.target.contains(event.relatedTarget)){
+    hoverBtns.addEventListener("mouseenter" , () => {
+
+        if(hoverBtns.id === "btnISeries"){
+
             iseriesInfoPop.classList.add("active")
-        } else if(event.target.id === "btnIGen" && !event.target.contains(event.relatedTarget)){
+
+        } else if(hoverBtns.id === "btnIGen"){
+
             igenInfoPop.classList.add("active")
-        }else if(event.target.id === "btnISku" && !event.target.contains(event.relatedTarget)){
+
+        } else if(hoverBtns.id === "btnISku"){
+
             iskuInfoPop.classList.add("active")
-        }else if(event.target.id === "btnISuffix" && !event.target.contains(event.relatedTarget)){
+
+        } else if(hoverBtns.id === "btnISuffix"){
+
             isuffixInfoPop.classList.add("active")
+
         }
 
-    }
+    })
+
+    hoverBtns.addEventListener("mouseleave" , () => {
+
+        if(hoverBtns.id === "btnISeries"){
+
+            iseriesInfoPop.classList.remove("active")
+
+        } else if(hoverBtns.id === "btnIGen"){
+
+            igenInfoPop.classList.remove("active")
+
+        } else if(hoverBtns.id === "btnISku"){
+
+            iskuInfoPop.classList.remove("active")
+
+        } else if(hoverBtns.id === "btnISuffix"){
+
+            isuffixInfoPop.classList.remove("active")
+
+        }
+
+    })
 
 })
 
-modelNumHover.addEventListener("mouseout" , (event) => {
+// them amd pop info elements 
+const aseriesInfoPop = document.getElementById("aseries")
+const agenInfoPop = document.getElementById("agen")
+const askuInfoPop = document.getElementById("asku")
+const asuffixInfoPop = document.getElementById("asuffix")
 
-    if(event.target.classList.contains("parts")){
+hoverBtns.forEach((hoverBtns) => {
 
-        if(event.target.id === "btnISeries" && !event.target.contains(event.relatedTarget)){
-            iseriesInfoPop.classList.remove("active")
-        } else if(event.target.id === "btnIGen" && !event.target.contains(event.relatedTarget)){
-            igenInfoPop.classList.remove("active")
-        }else if(event.target.id === "btnISku" && !event.target.contains(event.relatedTarget)){
-            iskuInfoPop.classList.remove("active")
-        }else if(event.target.id === "btnISuffix" && !event.target.contains(event.relatedTarget)){
-            isuffixInfoPop.classList.remove("active")
+    hoverBtns.addEventListener("mouseenter" , () => {
+
+        if(hoverBtns.id === "btnASeries"){
+
+            aseriesInfoPop.classList.add("active")
+
+        } else if(hoverBtns.id === "btnAGen"){
+
+            agenInfoPop.classList.add("active")
+
+        } else if(hoverBtns.id === "btnASku"){
+
+            askuInfoPop.classList.add("active")
+
+        } else if(hoverBtns.id === "btnASuffix"){
+
+            asuffixInfoPop.classList.add("active")
+
         }
 
-    }
+    })
+
+    hoverBtns.addEventListener("mouseleave" , () => {
+
+        if(hoverBtns.id === "btnASeries"){
+
+            aseriesInfoPop.classList.remove("active")
+
+        } else if(hoverBtns.id === "btnAGen"){
+
+            agenInfoPop.classList.remove("active")
+
+        } else if(hoverBtns.id === "btnASku"){
+
+            askuInfoPop.classList.remove("active")
+
+        } else if(hoverBtns.id === "btnASuffix"){
+
+            asuffixInfoPop.classList.remove("active")
+
+        }
+
+    })
 
 })
