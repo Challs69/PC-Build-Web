@@ -111,7 +111,7 @@ h2 span{
 }
 
 .info{
-    font-size: 15px;
+    font-size: 16px;
     padding: 16px 0px;
     text-align: left;
 }
@@ -251,6 +251,8 @@ h2 span{
     text-align: center;
     margin: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
 .parts-container{
@@ -264,7 +266,7 @@ h2 span{
     text-align: center;
     border-radius: 16px;
     border: 1px solid #4a4e69;
-    padding: 8px;
+    padding: 4px;
     width: 150px;
 }
 
@@ -298,4 +300,30 @@ h2 span{
 .contact-btn .btn{
     font-size: 20px;
     padding: 8px;
+}
+
+.example-brand-name{
+    padding: 0px;
+    opacity: 0.8;
+}
+
+/* .parts:hover{ 
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}*/
+
+.pop{
+    color: #f2e9e4;
+    font-size: 16px;
+    padding: 0px;
+}
+
+.pop.active{
+    font-size: 32px;
+    color: rgba(0, 255, 136, 0.8);
+    padding: 8px;
+}
+
+#suffixCardContainer .card{
+    width: 250px;
 }
