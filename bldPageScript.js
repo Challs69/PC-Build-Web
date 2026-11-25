@@ -63,6 +63,9 @@ const showSubSection = document.getElementById("intel-families-choose")
 
 intelBtn.addEventListener("click", () => {
 
+    // removing child of child (seires)
+    showIntelSeries.classList.remove("active")
+
     amdBtn.classList.remove("active")
 
     if(showSubSection.classList.contains("active")){
@@ -127,6 +130,15 @@ const intelCoreBtn = document.getElementById("intelCoreBtn")
 
 intelCoreBtn.addEventListener("click", () => {
 
+    // removing child of child (gen)
+    showIntelGene.classList.remove("active")
+
+    //removing ultra section
+    removeUltraSec()
+
+    //removing ultra btn effect
+    intelUltraBtn.classList.remove("active")
+
     if(showIntelSeries.classList.contains("active")){
         
         showIntelSeries.classList.toggle("active")
@@ -154,24 +166,39 @@ intelCoreBtn.addEventListener("click", () => {
         rstSuffixBtn.classList.remove("active")
     })
 
+    // reseting ultra series
+    rstUltraTier.forEach((rstUltraTier) => {
+        rstUltraTier.classList.remove("active")
+    })
+
 })
 
 // to show intel ultra series
 
+const showIntelUTiers = document.getElementById("intel-ultra-tier-choose")
 const intelUltraBtn = document.getElementById("intelUltraBtn")
 
 intelUltraBtn.addEventListener("click", () => {
 
-    if(showIntelSeries.classList.contains("active")){
+    // removing child of child (gen)
+    showIntelGene.classList.remove("active")
+
+    //removing core sec
+    removeCoreSec()
+
+    //removing intel btn effect
+    intelCoreBtn.classList.remove("active")
+
+    if(showIntelUTiers.classList.contains("active")){
         
-        showIntelSeries.classList.toggle("active")
+        showIntelUTiers.classList.toggle("active")
         intelCoreBtn.classList.remove("active")
 
         setTimeout(() => {
-            showIntelSeries.classList.toggle("active")
+            showIntelUTiers.classList.toggle("active")
         }, 100);
     } else {
-        showIntelSeries.classList.toggle("active")
+        showIntelUTiers.classList.toggle("active")
     }
 
     rstSeriesBtn.forEach((rstSeriesBtn) => {
@@ -201,6 +228,9 @@ const showIntelGene = document.getElementById("intel-gene-choose")
 const intelI3Btn = document.getElementById("intelI3Btn")
 
 intelI3Btn.addEventListener("click", () => {
+
+    // removing child of child(suffix)
+    showIntelSuffix.classList.remove("active")
     
     if(showIntelGene.classList.contains("active")){
         
@@ -234,6 +264,9 @@ const intelI5Btn = document.getElementById("intelI5Btn")
 
 intelI5Btn.addEventListener("click" , () => {
 
+    // removing child of child(suffix)
+    showIntelSuffix.classList.remove("active")
+
     if(showIntelGene.classList.contains("active")){
         
         showIntelGene.classList.toggle("active")
@@ -266,6 +299,9 @@ const intelI7Btn = document.getElementById("intelI7Btn")
 
 intelI7Btn.addEventListener("click" , () => {
 
+    // removing child of child(suffix)
+    showIntelSuffix.classList.remove("active")
+
     if(showIntelGene.classList.contains("active")){
         
         showIntelGene.classList.toggle("active")
@@ -297,6 +333,9 @@ intelI7Btn.addEventListener("click" , () => {
 const intelI9Btn = document.getElementById("intelI9Btn")
 
 intelI9Btn.addEventListener("click" , () => {
+
+    // removing child of child(suffix)
+    showIntelSuffix.classList.remove("active")
 
     if(showIntelGene.classList.contains("active")){
         
@@ -517,3 +556,193 @@ hoverBtns.forEach((hoverBtns) => {
     })
 
 })
+
+
+// intel ultra shows series
+
+// to show ultra 5 series 
+
+const showIntelUSeries = document.getElementById("intel-ultra-series-choose")
+const intelUT5Btn = document.getElementById("intelUT5Btn")
+
+intelUT5Btn.addEventListener("click" , () => {
+
+    //removing child of child (ultra child)
+    showIntelUSuffix.classList.remove("active")
+
+    if(showIntelUSeries.classList.contains("active")){
+        
+        showIntelUSeries.classList.toggle("active")
+        intelUT7Btn.classList.remove("active")
+        intelUT9Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelUSeries.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelUSeries.classList.toggle("active")
+    }
+
+    rstUSeriesBtn.forEach((rstUSeriesBtn) => {
+        rstUSeriesBtn.classList.remove("active")
+    })
+
+})
+
+// to show ultra 7 series
+
+const intelUT7Btn = document.getElementById("intelUT7Btn")
+
+intelUT7Btn.addEventListener("click" , () => {
+
+    //removing child of child (ultra child)
+    showIntelUSuffix.classList.remove("active")
+
+    if(showIntelUSeries.classList.contains("active")){
+        
+        showIntelUSeries.classList.toggle("active")
+        intelUT5Btn.classList.remove("active")
+        intelUT9Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelUSeries.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelUSeries.classList.toggle("active")
+    }
+
+    rstUSeriesBtn.forEach((rstUSeriesBtn) => {
+        rstUSeriesBtn.classList.remove("active")
+    })
+
+})
+
+//to show ultra 9 series
+
+const intelUT9Btn = document.getElementById("intelUT9Btn")
+
+intelUT9Btn.addEventListener("click" , () => {
+
+    //removing child of child (ultra child)
+    showIntelUSuffix.classList.remove("active")
+
+    if(showIntelUSeries.classList.contains("active")){
+        
+        showIntelUSeries.classList.toggle("active")
+        intelUT5Btn.classList.remove("active")
+        intelUT7Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelUSeries.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelUSeries.classList.toggle("active")
+    }
+
+    rstUSeriesBtn.forEach((rstUSeriesBtn) => {
+        rstUSeriesBtn.classList.remove("active")
+    })
+
+})
+
+//to show ultra suffix
+
+//Ultra series 2 suffix
+
+const showIntelUSuffix = document.getElementById("ultra-suffix-choose")
+const intelUS1Btn = document.getElementById("intelUS1Btn")
+
+intelUS1Btn.addEventListener("click" , () => {
+
+    if(showIntelUSuffix.classList.contains("active")){
+        
+        showIntelUSuffix.classList.toggle("active")
+        intelUS2Btn.classList.remove("active")
+        intelUS3Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelUSuffix.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelUSuffix.classList.toggle("active")
+    }
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+
+//Ultra series 2 suffix
+
+const intelUS2Btn = document.getElementById("intelUS2Btn")
+
+intelUS2Btn.addEventListener("click" , () => {
+
+    if(showIntelUSuffix.classList.contains("active")){
+        
+        showIntelUSuffix.classList.toggle("active")
+        intelUS1Btn.classList.remove("active")
+        intelUS3Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelUSuffix.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelUSuffix.classList.toggle("active")
+    }
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+
+//Ultra series 3 suffix
+
+const intelUS3Btn = document.getElementById("intelUS3Btn")
+
+intelUS3Btn.addEventListener("click" , () => {
+
+    if(showIntelUSuffix.classList.contains("active")){
+        
+        showIntelUSuffix.classList.toggle("active")
+        intelUS1Btn.classList.remove("active")
+        intelUS2Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showIntelUSuffix.classList.toggle("active")
+        }, 100);
+    } else {
+        showIntelUSuffix.classList.toggle("active")
+    }
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+
+// reseting all series of ultra 
+
+const rstUSeriesBtn = document.querySelectorAll("#intel-ultra-series-choose .btns")
+
+//remove intel ultra section
+
+function removeUltraSec(){
+    showIntelUSuffix.classList.remove("active")
+    showIntelUSeries.classList.remove("active")
+    showIntelUTiers.classList.remove("active")
+}
+
+//remove intel ultra section
+
+function removeCoreSec(){
+    showIntelSeries.classList.remove("active")
+    showIntelGene.classList.remove("active")
+    showIntelSuffix.classList.remove("active")
+}
+
+// reseting all utra tiers
+const rstUltraTier = document.querySelectorAll("#intel-ultra-tier-choose .btns")
+
