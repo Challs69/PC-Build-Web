@@ -105,7 +105,7 @@ intelBtn.addEventListener("click", () => {
 });
 
 // to show amd ...
-
+const showAmdSeries = document.getElementById("amd-series-choose")
 const amdBtn = document.getElementById("amdBtn")
 
 amdBtn.addEventListener("click" , () => {
@@ -115,8 +115,19 @@ amdBtn.addEventListener("click" , () => {
     showSubSection.classList.remove("active")
     resetingAllIntelBtns()
 
-})
+    if(showAmdSeries.classList.contains("active")){
+        
+        showAmdSeries.classList.toggle("active")
+        amdBtn.classList.remove("active")
 
+        setTimeout(() => {
+            showAmdSeries.classList.toggle("active")
+        }, 100);
+    } else {
+        showAmdSeries.classList.toggle("active")
+    }
+
+})
 
 
 // reseting children button (series child)
@@ -746,3 +757,30 @@ function removeCoreSec(){
 // reseting all utra tiers
 const rstUltraTier = document.querySelectorAll("#intel-ultra-tier-choose .btns")
 
+// amd btns
+
+// to show amd gen
+
+const showAmdGen = document.getElementById("amd-gene-choose")
+const amdRy3Btn = document.getElementById("amdRy3Btn")
+
+amdRy3Btn.addEventListener("click" , () => {
+
+    if(showAmdGen.classList.contains("active")){
+        
+        showAmdGen.classList.toggle("active")
+        intelUS2Btn.classList.remove("active")
+        intelUS3Btn.classList.remove("active")
+        
+        setTimeout(() => {
+            showAmdGen.classList.toggle("active")
+        }, 100);
+    } else {
+        showAmdGen.classList.toggle("active")
+    }
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})

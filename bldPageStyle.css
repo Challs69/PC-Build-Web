@@ -328,3 +328,24 @@ h2 span{
     width: 250px;
 }
 
+.right-side{
+    display: flex;
+    gap: 8px;
+}
+
+.re-btn{
+    background-color:rgba(0, 255, 136, 0.8) ;
+    padding: 8px 15px;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #4a4e69;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.re-btn:hover{
+    background-color: rgba(0, 255, 136, 0.685);
+}
+
+.re-btn:active{
+    border: 2px solid #4a4e69;
+}
