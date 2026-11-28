@@ -349,3 +349,20 @@ h2 span{
 .re-btn:active{
     border: 2px solid #4a4e69;
 }
+
+.sub-info{
+    width: 250px;
+    font-size: 15px;
+}
+
+#nvidia-Vram-choose .card{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#nvidia-Vram-choose .card.active{
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+}

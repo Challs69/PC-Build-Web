@@ -117,6 +117,7 @@ amdBtn.addEventListener("click" , () => {
     intelBtn.classList.remove("active")
     showSubSection.classList.remove("active")
     resetingAllIntelBtns()
+    removeUltraSec()
 
     if(showAmdSeries.classList.contains("active")){
         
@@ -984,4 +985,360 @@ function removeAmdSec(){
     showAmdSuffix.classList.remove("active")
     showAmdGen.classList.remove("active")
     showAmdSeries.classList.remove("active")
+}
+
+// GPU SEC //
+
+// NVIDIA clk btn => opens brands
+
+const showNvidiaBrandSec = document.getElementById("nvidia-branding-choose")
+
+const nvidiaBtn = document.getElementById("nvidiaBtn")
+
+nvidiaBtn.addEventListener("click" , () => {
+
+    if(showNvidiaBrandSec.classList.contains("active")){
+        
+        showNvidiaBrandSec.classList.toggle("active")
+        
+        setTimeout(() => {
+            showNvidiaBrandSec.classList.toggle("active")
+        }, 100);
+    } else {
+        showNvidiaBrandSec.classList.toggle("active")
+    }
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+
+// RTX clk Btn => opens nvidia gen 
+
+const showNvidiaGenSec = document.getElementById("nvidia-Gen-choose")
+
+const nvidiaRTXBtn = document.getElementById("nvidiaRTXBtn")
+/*
+nvidiaRTXBtn.addEventListener("click" , () => {
+
+    if(showNvidiaGenSec.classList.contains("active")){
+        
+        showNvidiaGenSec.classList.toggle("active")
+        
+        setTimeout(() => {
+            showNvidiaGenSec.classList.toggle("active")
+        }, 100);
+    } else {
+        showNvidiaGenSec.classList.toggle("active")
+    }
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+*/    
+
+// 20 Gen clk Btn => model num
+
+const showNvidiaModelSec = document.getElementById("nvidia-Model-choose")
+
+// making it for all gen btn
+
+const allNvidiaGenBtn = document.querySelectorAll("#nvidia-Gen-choose .btns")
+
+allNvidiaGenBtn.forEach((allNvidiaGenBtnX) => {
+
+    allNvidiaGenBtnX.addEventListener("click" , (event) => {
+
+        if(showNvidiaModelSec.classList.contains("active")){
+        
+            showNvidiaModelSec.classList.toggle("active")
+        
+            setTimeout(() => {
+                showNvidiaModelSec.classList.toggle("active")
+            }, 100);
+        } else {
+            showNvidiaModelSec.classList.toggle("active")
+        }
+
+        //2050
+
+        if(event.target.id === "nvidia20Gen"){
+            allNvidiaGenBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNvidiaGenBtn[0].classList.add("active")
+
+            allNvidiaVRAMCard.forEach((activate) => {
+                activate.classList.add("active")
+            })
+            allNvidiaVRAMCard[4].classList.remove("active")
+            allNvidiaVRAMCard[5].classList.remove("active")
+            allNvidiaVRAMCard[6].classList.remove("active")
+        }
+
+        //3050
+
+        if(event.target.id === "nvidia30Gen"){
+            allNvidiaGenBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNvidiaGenBtn[1].classList.add("active")
+
+            allNvidiaVRAMCard.forEach((activate) => {
+                activate.classList.add("active")
+            })
+            allNvidiaVRAMCard[0].classList.remove("active")
+            allNvidiaVRAMCard[4].classList.remove("active")
+            allNvidiaVRAMCard[6].classList.remove("active")
+        }
+
+        //4050
+
+        if(event.target.id === "nvidia40Gen"){
+            allNvidiaGenBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNvidiaGenBtn[2].classList.add("active")
+
+            allNvidiaVRAMCard.forEach((activate) => {
+                activate.classList.add("active")
+            })
+            allNvidiaVRAMCard[0].classList.remove("active")
+            allNvidiaVRAMCard[1].classList.remove("active")
+            allNvidiaVRAMCard[6].classList.remove("active")
+        }
+
+        //5050
+
+        if(event.target.id === "nvidia50Gen"){
+            allNvidiaGenBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNvidiaGenBtn[3].classList.add("active")
+
+            allNvidiaVRAMCard.forEach((activate) => {
+                activate.classList.add("active")
+            })
+            allNvidiaVRAMCard[0].classList.remove("active")
+            allNvidiaVRAMCard[1].classList.remove("active")
+            allNvidiaVRAMCard[5].classList.remove("active")
+        }
+
+        showNvidiaVRAMSec.classList.remove("active")
+
+        allNividiaModelBtn.forEach((rstBtn) => {
+            rstBtn.classList.remove("active")
+        })
+    })
+
+})
+
+
+/*
+const nvidia20GenBtn = document.getElementById("nvidia20Gen")
+
+nvidia20GenBtn.addEventListener("click" , () => {
+
+    if(showNvidiaModelSec.classList.contains("active")){
+        
+        showNvidiaModelSec.classList.toggle("active")
+        
+        setTimeout(() => {
+            showNvidiaModelSec.classList.toggle("active")
+        }, 100);
+    } else {
+        showNvidiaModelSec.classList.toggle("active")
+    }
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+*/
+
+// 50 model clk btn => opens vram
+/*
+
+const showNvidiaVRAMSec = document.getElementById("nvidia-Vram-choose")
+
+const nvidiaMD50Btn = document.getElementById("nvidiaMD50Btn")
+
+nvidiaMD50Btn.addEventListener("click" , () => {
+
+    if(showNvidiaVRAMSec.classList.contains("active")){
+        
+        showNvidiaVRAMSec.classList.toggle("active")
+        
+        setTimeout(() => {
+            showNvidiaVRAMSec.classList.toggle("active")
+        }, 100);
+    } else {
+        showNvidiaVRAMSec.classList.toggle("active")
+    }
+
+    rstSuffixBtn.forEach((rstSuffixBtn) => {
+        rstSuffixBtn.classList.remove("active")
+    })
+
+})
+*/
+
+
+// trying to make something
+
+// VRAM sec show
+
+const showNvidiaVRAMSec = document.getElementById("nvidia-Vram-choose")
+
+// taking all nvidia model btn
+
+const allNividiaModelBtn = document.querySelectorAll("#nvidia-Model-choose .btns")
+
+// taking all vram
+
+const allNvidiaVRAMCard = document.querySelectorAll("#nvidia-Vram-choose .card")
+
+allNividiaModelBtn.forEach((allNividiaModelBtnX) => {
+
+    allNividiaModelBtnX.addEventListener("click" , (event) => {
+
+
+        if(showNvidiaVRAMSec.classList.contains("active")){
+        
+            showNvidiaVRAMSec.classList.toggle("active")
+        
+            setTimeout(() => {
+                showNvidiaVRAMSec.classList.toggle("active")
+            }, 100);
+        } else {
+            showNvidiaVRAMSec.classList.toggle("active")
+        }
+
+        //50
+        if(event.target.id === "nvidiaMD50Btn"){
+            allNividiaModelBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNividiaModelBtn[0].classList.add("active")
+        }
+
+        //60
+        if(event.target.id === "nvidiaMD60Btn"){
+            allNividiaModelBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNividiaModelBtn[1].classList.add("active")
+        }
+
+        //60 Ti
+        if(event.target.id === "nvidiaMD60TiBtn"){
+            allNividiaModelBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNividiaModelBtn[2].classList.add("active")
+        }
+
+        //70
+        if(event.target.id === "nvidiaMD70Btn"){
+            allNividiaModelBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNividiaModelBtn[3].classList.add("active")
+        }
+
+        //70 Ti
+        if(event.target.id === "nvidiaMD70TiBtn"){
+            allNividiaModelBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNividiaModelBtn[4].classList.add("active")
+        }
+
+        //80
+        if(event.target.id === "nvidiaMD80Btn"){
+            allNividiaModelBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNividiaModelBtn[5].classList.add("active")
+        }
+
+        //90
+        if(event.target.id === "nvidiaMD90Btn"){
+            allNividiaModelBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+            allNividiaModelBtn[6].classList.add("active")
+        }
+
+        rstVramBtn.forEach((rstBtn) => {
+            rstBtn.classList.remove("active")
+        })
+    })
+
+})
+
+const rstVramBtn = document.querySelectorAll("#nvidia-Vram-choose .btns")
+
+//getting every brand btn of nvidia
+const allNvidiaBrandBtn = document.querySelectorAll("#nvidia-branding-choose .btns")
+
+//GTX gen decler
+
+const showNvidiaGTXGenSec = document.getElementById("nvidia-GTX-Gen-choose")
+
+//on click GTX => show its gen
+
+allNvidiaBrandBtn.forEach((btn) => {
+    btn.addEventListener("click" , (event) => {
+        if(event.target.id === "nvidiaRTXBtn"){
+
+            if(showNvidiaGenSec.classList.contains("active")){
+        
+                showNvidiaGenSec.classList.toggle("active")
+        
+                setTimeout(() => {
+                    showNvidiaGenSec.classList.toggle("active")
+                }, 100);
+            } else {
+                showNvidiaGenSec.classList.toggle("active")
+            }
+
+            allNvidiaBrandBtn[1].classList.remove("active")
+            allNvidiaBrandBtn[0].classList.add("active")
+        }
+
+        if(event.target.id === "nvidiaGTXBtn"){
+            
+            removeRTXSec()
+
+            allNvidiaGenBtn.forEach((deAct) => {
+                deAct.classList.remove("active")
+            })
+
+            if(showNvidiaGTXGenSec.classList.contains("active")){
+        
+                showNvidiaGTXGenSec.classList.toggle("active")
+        
+                setTimeout(() => {
+                    showNvidiaGTXGenSec.classList.toggle("active")
+                }, 100);
+            } else {
+                showNvidiaGTXGenSec.classList.toggle("active")
+            }
+
+            allNvidiaBrandBtn[0].classList.remove("active")
+            allNvidiaBrandBtn[1].classList.add("active")
+        }
+    })
+})
+
+// removing rtx sec
+function removeRTXSec(){
+    showNvidiaGenSec.classList.remove("active")
+    showNvidiaModelSec.classList.remove("active")
+    showNvidiaVRAMSec.classList.remove("active")
 }
